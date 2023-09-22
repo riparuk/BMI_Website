@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Berat Badan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Check your BMI</h1>
+    <div class="input-container">
+        <label for="weight">Berat (kg):</label>
+        <input type="number" id="weight" placeholder="Masukkan berat badan">
+    </div>
+    <div class="input-container">
+        <label for="height">Tinggi (cm):</label>
+        <input type="number" id="height" placeholder="Masukkan tinggi badan">
+    </div>
+    <button onclick="calculateBMI()">Hitung BMI</button>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>
