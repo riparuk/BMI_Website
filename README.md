@@ -21,5 +21,5 @@ Ini akan membantu pengguna memahami lebih banyak tentang kondisi kesehatan merek
 
 ### Kelompok 6 Kecerdasan Buatan :
 - Rifa Faruqi (2108107010073)
-- ...
+- Ganang Setyo Hadi (2208107010052)
 - ...
