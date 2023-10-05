@@ -20,8 +20,9 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- My Syles -->
-		<link rel="stylesheet" href="style.css"
+		<link rel="stylesheet" href="style.css">
   </head>
+
   <body>
     <!-- Navbar Start -->
     <nav class="navbar">
@@ -52,9 +53,22 @@
 
     <!-- BMI Calculator Section Start -->
     <section id="calculator" class="calculator">
-      <h2>BMI Calculator</h2>
+        <h2>BMI Calculator</h2>
+        <div>
+            <label for="weight">Berat (kg):</label>
+            <input type="number" id="weight" name="weight" placeholder="Masukkan berat badan" required>
+        </div>
+        <div>
+            <label for="height">Tinggi (cm):</label>
+            <input type="number" id="height" name="height" placeholder="Masukkan tinggi badan" required>
+        </div>
+        <button onclick="calculateBMI()">Hitung BMI</button>
+        <div id="result"></div>
+        <br>
+        <div id="advice0"></div>
+        <div id="advice1"></div>
     </section>
-    <!-- BMI Calculator Section Start -->
+    <!-- BMI Calculator Section End -->
 
     <!-- About Section Start-->
     <section id="about" class="about">
@@ -146,5 +160,9 @@
 
     <!-- My Javascript -->
 		<script src="script.js"></script>
+    
+    <!-- BMI Backend Script -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="bmi.js"></script>
   </body>
 </html>

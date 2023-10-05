@@ -1,5 +1,5 @@
 :root {
-  --primary: #000000;
+  --primary: #000;
 }
 
 * {
@@ -14,7 +14,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary);
-  color: #000000;
+  color: #fff;
 }
 
 /*Navbar*/
@@ -256,6 +256,7 @@ footer .credit a {
   html {
     font-size: 62.5%;
   }
+}
 
 #hamburger-menu {
   display: inline-block;
