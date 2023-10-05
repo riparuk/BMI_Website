@@ -1,22 +1,16 @@
+// Toggle class active
+const navbarNav = document.querySelector(".navbar-nav");
 
-function calculateBMI() {
-    const weight = parseFloat(document.getElementById("weight").value);
-    const height = parseFloat(document.getElementById("height").value) / 100; // Konversi tinggi ke meter
+// Hamburger menu di click
+document.querySelector("#hamburger-menu").onclick = () => {
+  navbarNav.classList.toggle("active");
+};
 
-    if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
-        document.getElementById("result").innerHTML = "Masukkan berat dan tinggi yang valid.";
-        return;
-    }
+// Click diluar sidebar untuk menghilangkan menu
+const hamburger = document.querySelector("#hamburger-menu");
 
-    const bmi = weight / (height * height);
-
-    let result = "BMI Anda adalah " + bmi.toFixed(2) + ". ";
-    if (bmi < 18.5) {
-        result += "Anda kurus.";
-    } else if (bmi >= 18.5 && bmi Check your        result += "Anda ideal.";
-    } else {
-        result += "Anda gemuk.";
-    }
-
-    document.getElementById("result").innerHTML = result;
-}
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
+});
