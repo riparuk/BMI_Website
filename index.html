@@ -1,24 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Berat Badan</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Check your BMI</h1>
-    <div class="input-container">
-        <label for="weight">Berat (kg):</label>
-        <input type="number" id="weight" placeholder="Masukkan berat badan">
-    </div>
-    <div class="input-container">
-        <label for="height">Tinggi (cm):</label>
-        <input type="number" id="height" placeholder="Masukkan tinggi badan">
-    </div>
-    <button onclick="calculateBMI()">Hitung BMI</button>
-    <div id="result"></div>
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight Advisor</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- Faether Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Syles -->
+    <link rel="stylesheet" href="../css/style.css"
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Weight Advisor</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#calculator">BMI Calculator</a>
+        <a href="#about">About Us</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Get Advice For Your Weight!</h1>
+        <p>Your Journey to a Healthier You Starts Here and One Click Away!</p>
+        <a href="#" class="cta">Get Started</a>
+      </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- BMI Calculator Section Start -->
+    <section id="calculator" class="calculator">
+      <h2>BMI Calculator</h2>
+    </section>
+    <!-- BMI Calculator Section Start -->
+
+    <!-- About Section Start-->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+
+      <div class="row">
+        <div class="content">
+          <h3>How It Works?</h3>
+          <p id="bmi-exp">
+            BMI is a measurement of a person's leanness or corpulence based on
+            their height and weight, and is intended to quantify tissue mass. It
+            is widely used as a general indicator of whether a person has a
+            healthy body weight for their height. Specifically, the value
+            obtained from the calculation of BMI is used to categorize whether a
+            person is underweight, normal weight, overweight, or obese depending
+            on what range the value falls between. These ranges of BMI vary
+            based on factors such as region and age, and are sometimes further
+            divided into subcategories such as severely underweight or very
+            severely obese. Being overweight or underweight can have significant
+            health effects, so while BMI is an imperfect measure of healthy body
+            weight, it is a useful indicator of whether any additional testing
+            or action is required. Refer to the table below to see the different
+            categories based on BMI that are used by the calculator.<br />
+          </p>
+          <h3 id="who">
+            This is the World Health Organization's (WHO) recommended body
+            weight based on BMI values for adults.
+          </h3>
+          <ul>
+            <li>
+              <span class="list-label">-Severe Thinness</span>: BMI below 16
+              Moderate
+            </li>
+            <li>
+              <span class="list-label">-Thinness</span>: BMI between 16 and 17
+            </li>
+            <li>
+              <span class="list-label">-Mild Thinness</span>: BMI between 17 and
+              18.5
+            </li>
+            <li>
+              <span class="list-label">-Normal</span>: BMI between 18.5 and 25
+            </li>
+            <li>
+              <span class="list-label">-Overweight</span>: BMI between 25 and 30
+            </li>
+            <li>
+              <span class="list-label">-Obese Class I</span>: BMI between 30 and
+              35
+            </li>
+            <li>
+              <span class="list-label">-Obese Class II</span>: BMI between 35
+              and 40
+            </li>
+            <li>
+              <span class="list-label">-Obese Class III</span>: BMI greater than
+              40
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End-->
+
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#calculator">BMI Calculator</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Kelompok6</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="../js/script.js"></script>
+  </body>
 </html>
