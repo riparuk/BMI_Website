@@ -177,7 +177,7 @@ body {
 .calculator button {
   width: 100%;
   padding: 15px;
-  background-color: #007bff; /* Warna tombol biru */
+  background-color: #FE8B00; /* Warna tombol biru */
   color: #fff;
   font-size: 18px;
   border: none;
@@ -187,51 +187,50 @@ body {
 }
 
 .calculator button:hover:enabled {
-  background-color: #0056b3; /* Warna tombol biru saat hover */
+  background-color: #FEA300; /* Warna tombol biru saat hover */
 }
 
 .calculator-sec {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.calculator-sec .calculation {
-  flex: 1 1 35rem;
+.calculation {
+  flex: 1; /* Menggunakan semua ruang yang tersedia */
+  margin: 0 20px;
 }
 
-.calculator-sec .result {
-    margin-left: 40px;
-    padding-left: 25px;
-  flex: 1 1 45rem;
-  padding: 0 1rem;
-  font-size: 1.4rem;
-  text-align: justify;
+.result {
+  flex: 1; /* Menggunakan semua ruang yang tersedia */
+  margin-top: 2rem;
+  margin: 0 20px;
+  /* Tambahkan background-color, border, dan padding */
+  color: #333;
+  background-color: #f0f0f0; /* Warna latar belakang yang diinginkan */
+  border: 1px solid #ccc; /* Border dengan ketebalan 1px dan warna abu-abu */
+  padding: 20px; /* Padding di dalam elemen */
+  border-radius: 5px;
 }
 
 /* Gaya untuk hasil dan saran */
-.calculator #result {
+.calculator #result #advice {
     margin-top: 10px;
-    padding: 15px;
-    font-size: 18px;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.2); /* Warna latar belakang dengan transparansi */
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .calculator #advice {
-    margin-top: 10px;
-    padding: 15px;
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 14px;
     background-color: rgba(0, 0, 0, 0.2); /* Warna latar belakang dengan transparansi */
     border-radius: 5px;
     text-align: left;
   }
+  
+#advice {
+  margin-left: 5%;
+}
+  
 
 /* Gaya responsif untuk tampilan layar lebih kecil */
 @media screen and (max-width: 768px) {
     .calculator {
-      max-width: 90%; /* Mengurangi lebar kalkulator untuk layar lebih kecil */
+      max-width: 100%; /* Mengurangi lebar kalkulator untuk layar lebih kecil */
     }
     .calculator .calculator-sec {
       flex-direction: column; /* Mengubah tata letak menjadi tumpuk di bawah */
@@ -240,7 +239,10 @@ body {
     .calculator .calculation,
     .calculator .result {
       width: 100%; /* Lebar penuh untuk elemen input dan output */
-      margin: 0; /* Hapus margin untuk elemen input dan output */
+    }
+    
+    .result {
+      margin-top: 20px;
     }
     .calculator .divider-vertical {
       display: none; /* Sembunyikan garis pembatas pada layar kecil */

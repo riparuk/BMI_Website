@@ -60,13 +60,13 @@ function getAdvices(bmi, classification) {
   // Mendapatkan tips untuk kategori berdasarkan argument classification
   const adviceText = advice.find((item) => item.level === classification).tips;
 
-  animateTextToDiv("Saran untuk anda : \n", adviceDiv, 200);
+  animateTextToDiv("\nSaran untuk anda : \n", resultDiv, 200);
   setTimeout(() => {
     // adviceDiv.innerHTML = "";
     // Mulai animasi teks di dalam elemen "advice"
     animateTextToDiv(adviceText, adviceDiv, 200, function () {
       // Perintah lain yang ingin dijalankan setelah animasi selesai
-      adviceDiv.innerHTML = "Saran untuk anda : \n" + marked.parse(adviceText);
+      adviceDiv.innerHTML = marked.parse(adviceText);
       toggleButton(calButton);
     });
   }, 1500);
