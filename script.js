@@ -1,4 +1,22 @@
+// Fungsi untuk menampilkan teks animasi
+function animateTextToDiv(text, Div, speed, callback) {
+  let index = 0;
+  const words = String(text).split(" ");
+  const interval = setInterval(() => {
+    if (index < words.length) {
+      Div.innerHTML += words[index] + " ";
+      index++;
+    } else {
+      clearInterval(interval);
+      if (typeof callback === "function") {
+        callback(); // Jalankan callback setelah animasi selesai
+      }
+    }
+  }, speed);
+}
+
 function getAdvices(bmi, classification) {
+  calButton = document.getElementById("calButton");
   const advice = [
     {
       level: "Severe Thinness",
@@ -38,44 +56,44 @@ function getAdvices(bmi, classification) {
 
   // Anda dapat menggunakan objek ini dalam kode JavaScript Anda untuk menampilkan saran berdasarkan kategori berat badan.
   const adviceDiv = document.getElementById("advice");
-  adviceDiv.innerHTML = "Loading...";
-
-  // Fungsi untuk menampilkan teks animasi
-  function animateTextToAdviceDiv(text, callback) {
-    let index = 0;
-    const words = String(text).split(" ");
-    const interval = setInterval(() => {
-      if (index < words.length) {
-        adviceDiv.textContent += words[index] + " ";
-        index++;
-      } else {
-        clearInterval(interval);
-        if (typeof callback === "function") {
-          callback(); // Jalankan callback setelah animasi selesai
-        }
-      }
-    }, 200);
-  }
 
   // Mendapatkan tips untuk kategori berdasarkan argument classification
   const adviceText = advice.find((item) => item.level === classification).tips;
+
+  animateTextToDiv("Saran untuk anda : \n", adviceDiv, 200);
   setTimeout(() => {
-    adviceDiv.innerHTML = "";
+    // adviceDiv.innerHTML = "";
     // Mulai animasi teks di dalam elemen "advice"
-    animateTextToAdviceDiv(adviceText, function () {
+    animateTextToDiv(adviceText, adviceDiv, 200, function () {
       // Perintah lain yang ingin dijalankan setelah animasi selesai
-      adviceDiv.innerHTML = marked.parse(adviceText);
+      adviceDiv.innerHTML = "Saran untuk anda : \n" + marked.parse(adviceText);
+      toggleButton(calButton);
     });
   }, 1500);
 }
 
+function toggleButton(button) {
+  if (button.disabled == false) {
+    button.disabled = true;
+  } else {
+    button.disabled = false;
+  }
+}
+
 function calculateBMI() {
+  // disabled the button when calculateBMI is called
+  calButton = document.getElementById("calButton");
+  toggleButton(calButton);
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("advice").innerHTML = "";
+
   const weight = parseFloat(document.getElementById("weight").value);
   const height = parseFloat(document.getElementById("height").value) / 100; // Konversi tinggi ke meter
 
   if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
     document.getElementById("result").innerHTML =
       "Masukkan berat dan tinggi yang valid.";
+    toggleButton(calButton);
     return;
   }
 
@@ -104,11 +122,13 @@ function calculateBMI() {
   }
 
   result += " Klasifikasi: " + `<strong>${classification}</strong>`;
-  document.getElementById("result").innerHTML =
-    result + "<br>" + "Saran untuk anda : \n";
+  resultDiv = document.getElementById("result");
+  resultText = result + "<br>";
 
-  // Mendapatkan advice
-  getAdvices(bmi, classification);
+  animateTextToDiv(resultText, resultDiv, 100, function () {
+    // Mendapatkan advice setelah memunculkan bmi
+    getAdvices(bmi, classification);
+  });
 }
 
 // Toggle class active
@@ -128,8 +148,19 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Click # to id dengan smooth
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 // Fungsi untuk mengubah tampilan navbar saat discroll
-window.onscroll = function() {
+window.onscroll = function () {
   var navbar = document.querySelector(".navbar");
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     navbar.style.transform = "translateY(-100%)"; // Menghilangkan navbar
@@ -139,8 +170,6 @@ window.onscroll = function() {
     navbar.style.backgroundColor = "transparent"; // Kembalikan latar belakang transparan
   }
 };
-
-
 
 // // Fungsi untuk mengosongkan input berat
 // function clearWeight() {
