@@ -1,24 +1,196 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Berat Badan</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Check your BMI</h1>
-    <div class="input-container">
-        <label for="weight">Berat (kg):</label>
-        <input type="number" id="weight" placeholder="Masukkan berat badan">
-    </div>
-    <div class="input-container">
-        <label for="height">Tinggi (cm):</label>
-        <input type="number" id="height" placeholder="Masukkan tinggi badan">
-    </div>
-    <button onclick="calculateBMI()">Hitung BMI</button>
-    <div id="result"></div>
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight Advisor</title>
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Faether Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Syles -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <h1 style="padding: 2rem; font-size: 25px">Weight Advisor</h1>
+        <!-- <a href="#" class="navbar-logo">Weight Advisor</a> -->
+        <div class="navbar-nav">
+          <a href="#home">Home</a>
+          <a href="#calculator">BMI Calculator</a>
+        </div>
+        <div class="navbar-extra">
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Get Advice For Your Weight!</h1>
+        <p>Weight Advisor</p>
+        <a href="#calculator" class="cta">Get Started</a>
+      </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- BMI Calculator Section Start -->
+    <section id="calculator" class="calculator">
+      <h2>BMI Calculator</h2>
+      <div class="calculator-sec">
+        <div class="calculation">
+          <div>
+            <label for="weight">Berat (kg)</label>
+            <input
+              type="number"
+              id="weight"
+              name="weight"
+              placeholder="Masukkan berat badan"
+              required
+            />
+            <!-- <button class="clear-button" onclick="clearWeight()">x</button> -->
+          </div>
+          <div>
+            <label for="height">Tinggi (cm)</label>
+            <input
+              type="number"
+              id="height"
+              name="height"
+              placeholder="Masukkan tinggi badan"
+              required
+            />
+            <!-- <button class="clear-button" onclick="clearHeight()">x</button> -->
+          </div>
+          <button id="calButton" onclick="calculateBMI()">Check Mulai</button>
+        </div>
+        <div class="result">
+          <div id="result">
+            BMI, atau Body Mass Index (Indeks Massa Tubuh), adalah sebuah metode
+            yang digunakan untuk mengukur seberapa ideal berat badan seseorang
+            berdasarkan tinggi badan mereka. Ini adalah salah satu alat yang
+            sering digunakan oleh profesional medis dan peneliti untuk
+            mengevaluasi apakah seseorang memiliki berat badan yang sehat atau
+            berisiko kelebihan berat badan atau kekurangan berat badan.
+          </div>
+          <div id="advice"></div>
+        </div>
+      </div>
+    </section>
+    <!-- BMI Calculator Section End -->
+
+    <!-- About Section Start-->
+    <section id="about" class="about">
+      <h2>About Us</h2>
+
+      <div class="row">
+        <div class="content">
+          <h3>Cara kerja</h3>
+          <p id="bmi-exp">
+            BMI checker adalah alat yang digunakan untuk menghitung Indeks Massa
+            Tubuh (BMI) seseorang. Cara kerja BMI checker adalah dengan
+            mengumpulkan informasi berat badan dan tinggi badan dari individu
+            yang ingin mengetahui nilai BMI mereka. Setelah informasi ini
+            diperoleh, alat tersebut akan melakukan perhitungan sederhana dengan
+            menggunakan rumus BMI standar. Rumus BMI adalah berat badan (dalam
+            kilogram) dibagi oleh kuadrat tinggi badan (dalam meter). Hasil
+            perhitungan ini menghasilkan angka yang mencerminkan kategori berat
+            badan seseorang, seperti "Severely Thin," "Normal," "Overweight,"
+            atau "Obese." Hasil BMI tersebut kemudian dibandingkan dengan
+            kriteria kategori berat badan yang telah ditetapkan oleh organisasi
+            kesehatan, seperti Organisasi Kesehatan Dunia (WHO). BMI checker
+            akan memberikan informasi apakah seseorang berada dalam kategori
+            berat badan yang sehat atau berisiko terhadap masalah kesehatan
+            tertentu, seperti obesitas atau kekurangan gizi. Penting untuk
+            diingat bahwa meskipun BMI checker dapat memberikan perkiraan kasar
+            tentang berat badan ideal seseorang, ini hanya merupakan salah satu
+            aspek penilaian kesehatan. Sebagai gantinya, evaluasi lebih lanjut
+            oleh profesional medis mungkin diperlukan untuk menentukan kondisi
+            kesehatan secara keseluruhan.<br />
+          </p>
+          <h3 id="who">Tabel BMI untuk orang dewasa</h3>
+          <p id="bmi-exp">
+            Berikut adalah tabel berat badan yang direkomendasikan oleh Organisasi
+            Kesehatan Dunia (WHO) berdasarkan nilai BMI untuk orang dewasa. Ini
+            digunakan untuk pria dan wanita, usia 20 tahun ke atas.
+          </p>
+          <table>
+            <tr>
+              <th>Classification</th>
+              <th>BMI Score</th>
+            </tr>
+            <tr>
+              <td>Severe Thinness</td>
+              <td>&lt; 16</td>
+            </tr>
+            <tr>
+              <td>Moderate Thinness</td>
+              <td>16 - 17</td>
+            </tr>
+            <tr>
+              <td>Mild Thinness</td>
+              <td>17 - 18.5</td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td>18.5 - 25</td>
+            </tr>
+            <tr>
+              <td>Overweight</td>
+              <td>25 - 30</td>
+            </tr>
+            <tr>
+              <td>Obese Class I</td>
+              <td>30 - 35</td>
+            </tr>
+            <tr>
+              <td>Obese Class II</td>
+              <td>35 - 40</td>
+            </tr>
+            <tr>
+              <td>Obese Class III</td>
+              <td>&gt; 40</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End-->
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="credit">
+        <p>Created by <a href="">Kelompok6</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
+    <!-- Footer Section end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- bootstrap js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+
+    <!-- My Javascript -->
+    <script src="./script.js"></script>
+
+    <!-- import marked Script -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
 </html>
