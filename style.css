@@ -186,9 +186,10 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.calculator button:hover {
+.calculator button:hover:enabled {
   background-color: #0056b3; /* Warna tombol biru saat hover */
 }
+
 .calculator-sec {
   display: flex;
 }
@@ -408,4 +409,11 @@ footer .credit a {
       font-size: 55%;
     }
   }
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
