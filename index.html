@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weight Advisor</title>
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,7 +26,7 @@
     <!-- Navbar Start -->
     <nav class="navbar">
       <div class="navbar-inner">
-        <img class="navbar-logo" src="./cek.png" alt=""width="400" height="100">
+        <h1 style="padding: 2rem; font-size: 25px">Weight Advisor</h1>
         <!-- <a href="#" class="navbar-logo">Weight Advisor</a> -->
         <div class="navbar-nav">
           <a href="#home">Home</a>
@@ -41,7 +43,7 @@
     <section class="hero" id="home">
       <main class="content">
         <h1>Get Advice For Your Weight!</h1>
-        <p style="color: black;">Your Journey to a Healthier You Starts Here and One Click Away!</p>
+        <p>Weight Advisor</p>
         <a href="#calculator" class="cta">Get Started</a>
       </main>
     </section>
@@ -77,7 +79,14 @@
           <button id="calButton" onclick="calculateBMI()">Check Mulai</button>
         </div>
         <div class="result">
-          <div id="result">BMI, atau Body Mass Index (Indeks Massa Tubuh), adalah sebuah metode yang digunakan untuk mengukur seberapa ideal berat badan seseorang berdasarkan tinggi badan mereka. Ini adalah salah satu alat yang sering digunakan oleh profesional medis dan peneliti untuk mengevaluasi apakah seseorang memiliki berat badan yang sehat atau berisiko kelebihan berat badan atau kekurangan berat badan.</div>
+          <div id="result">
+            BMI, atau Body Mass Index (Indeks Massa Tubuh), adalah sebuah metode
+            yang digunakan untuk mengukur seberapa ideal berat badan seseorang
+            berdasarkan tinggi badan mereka. Ini adalah salah satu alat yang
+            sering digunakan oleh profesional medis dan peneliti untuk
+            mengevaluasi apakah seseorang memiliki berat badan yang sehat atau
+            berisiko kelebihan berat badan atau kekurangan berat badan.
+          </div>
           <div id="advice"></div>
         </div>
       </div>
@@ -90,58 +99,73 @@
 
       <div class="row">
         <div class="content">
-          <h3>How It Works?</h3>
+          <h3>Cara kerja</h3>
           <p id="bmi-exp">
-            BMI is a measurement of a person's leanness or corpulence based on
-            their height and weight, and is intended to quantify tissue mass. It
-            is widely used as a general indicator of whether a person has a
-            healthy body weight for their height. Specifically, the value
-            obtained from the calculation of BMI is used to categorize whether a
-            person is underweight, normal weight, overweight, or obese depending
-            on what range the value falls between. These ranges of BMI vary
-            based on factors such as region and age, and are sometimes further
-            divided into subcategories such as severely underweight or very
-            severely obese. Being overweight or underweight can have significant
-            health effects, so while BMI is an imperfect measure of healthy body
-            weight, it is a useful indicator of whether any additional testing
-            or action is required. Refer to the table below to see the different
-            categories based on BMI that are used by the calculator.<br />
+            BMI checker adalah alat yang digunakan untuk menghitung Indeks Massa
+            Tubuh (BMI) seseorang. Cara kerja BMI checker adalah dengan
+            mengumpulkan informasi berat badan dan tinggi badan dari individu
+            yang ingin mengetahui nilai BMI mereka. Setelah informasi ini
+            diperoleh, alat tersebut akan melakukan perhitungan sederhana dengan
+            menggunakan rumus BMI standar. Rumus BMI adalah berat badan (dalam
+            kilogram) dibagi oleh kuadrat tinggi badan (dalam meter). Hasil
+            perhitungan ini menghasilkan angka yang mencerminkan kategori berat
+            badan seseorang, seperti "Severely Thin," "Normal," "Overweight,"
+            atau "Obese." Hasil BMI tersebut kemudian dibandingkan dengan
+            kriteria kategori berat badan yang telah ditetapkan oleh organisasi
+            kesehatan, seperti Organisasi Kesehatan Dunia (WHO). BMI checker
+            akan memberikan informasi apakah seseorang berada dalam kategori
+            berat badan yang sehat atau berisiko terhadap masalah kesehatan
+            tertentu, seperti obesitas atau kekurangan gizi. Penting untuk
+            diingat bahwa meskipun BMI checker dapat memberikan perkiraan kasar
+            tentang berat badan ideal seseorang, ini hanya merupakan salah satu
+            aspek penilaian kesehatan. Sebagai gantinya, evaluasi lebih lanjut
+            oleh profesional medis mungkin diperlukan untuk menentukan kondisi
+            kesehatan secara keseluruhan.<br />
           </p>
-          <h3 id="who">
-            This is the World Health Organization's (WHO) recommended body
-            weight based on BMI values for adults.
-          </h3>
-          <ul>
-            <li>
-              <span class="list-label">-Severe Thinness</span>: BMI below 16
-              Moderate
-            </li>
-            <li>
-              <span class="list-label">-Thinness</span>: BMI between 16 and 17
-            </li>
-            <li>
-              <span class="list-label">-Mild Thinness</span>: BMI between 17 and
-              18.5
-            </li>
-            <li>
-              <span class="list-label">-Normal</span>: BMI between 18.5 and 25
-            </li>
-            <li>
-              <span class="list-label">-Overweight</span>: BMI between 25 and 30
-            </li>
-            <li>
-              <span class="list-label">-Obese Class I</span>: BMI between 30 and
-              35
-            </li>
-            <li>
-              <span class="list-label">-Obese Class II</span>: BMI between 35
-              and 40
-            </li>
-            <li>
-              <span class="list-label">-Obese Class III</span>: BMI greater than
-              40
-            </li>
-          </ul>
+          <h3 id="who">Tabel BMI untuk orang dewasa</h3>
+          <p id="bmi-exp">
+            Berikut adalah tabel berat badan yang direkomendasikan oleh Organisasi
+            Kesehatan Dunia (WHO) berdasarkan nilai BMI untuk orang dewasa. Ini
+            digunakan untuk pria dan wanita, usia 20 tahun ke atas.
+          </p>
+          <table>
+            <tr>
+              <th>Classification</th>
+              <th>BMI Score</th>
+            </tr>
+            <tr>
+              <td>Severe Thinness</td>
+              <td>&lt; 16</td>
+            </tr>
+            <tr>
+              <td>Moderate Thinness</td>
+              <td>16 - 17</td>
+            </tr>
+            <tr>
+              <td>Mild Thinness</td>
+              <td>17 - 18.5</td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td>18.5 - 25</td>
+            </tr>
+            <tr>
+              <td>Overweight</td>
+              <td>25 - 30</td>
+            </tr>
+            <tr>
+              <td>Obese Class I</td>
+              <td>30 - 35</td>
+            </tr>
+            <tr>
+              <td>Obese Class II</td>
+              <td>35 - 40</td>
+            </tr>
+            <tr>
+              <td>Obese Class III</td>
+              <td>&gt; 40</td>
+            </tr>
+          </table>
         </div>
       </div>
     </section>
@@ -149,24 +173,6 @@
 
     <!-- Footer Section Start -->
     <footer>
-      <div class="socials">
-        <a href="https://www.instagram.com/hmif_usk/?hl=id"
-          ><i data-feather="instagram"></i
-        ></a>
-        <a href="https://x.com/informatika_usk?s=21"
-          ><i data-feather="twitter"></i
-        ></a>
-        <a href="https://www.facebook.com/search/top?q=informatika%20unsyiah"
-          ><i data-feather="facebook"></i
-        ></a>
-      </div>
-
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#calculator">BMI Calculator</a>
-      </div>
-
       <div class="credit">
         <p>Created by <a href="">Kelompok6</a>. | &copy; 2023.</p>
       </div>

@@ -17,6 +17,8 @@ body {
   color: #fff;
 }
 
+
+
 /*Navbar*/
 /* Gaya awal navbar */
 .navbar {
@@ -51,7 +53,6 @@ body {
     font-weight: bold;
   }
 .navbar .navbar-logo {
-    padding-left: 40px;
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
@@ -103,12 +104,12 @@ body {
 }
 
 .hero .content p {
-  color: #ffffff;
+  color: #000;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   font-size: 1.5rem;
   margin-top: 0.5rem;
   line-height: 1.2;
-  font-weight: 100;
-  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  font-weight: 400;
 }
 
 .hero .content .cta {
@@ -258,18 +259,18 @@ body {
 
 .about h2,
 .calculator h2 {
-  color: #ffffff;
+  color: #f0f0f0;
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
 .about .row .content h3 {
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
 .about .row .content {
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
 .about.row {
@@ -288,7 +289,6 @@ body {
 #bmi-exp {
   margin-bottom: 0.8rem;
   font-size: 1rem;
-  font-weight: 200;
   line-height: 1.6;
   text-align: justify;
 }
@@ -319,41 +319,18 @@ body {
 
 /* Footer */
 footer {
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   text-align: center;
-  padding: 1rem 0 3rem;
   margin-top: 3rem;
-}
-
-footer .socials {
-  padding: 1rem 0;
-}
-
-footer .socials a {
-  color: #000000;
-  margin: 1rem;
-}
-
-footer .socials a:hover,
-footer .links a:hover {
-  color: #cccccc;
-}
-
-footer .links {
-  margin-bottom: 1.4rem;
-}
-
-footer .links a {
-  color: #000000;
-  padding: 0.7rem 0.5rem;
 }
 
 footer .credit {
   font-size: 0.8rem;
+  padding: 1rem;
 }
 
 footer .credit a {
-  color: darkseagreen;
+  color: #FE8B00;
   font-weight: 700;
 }
 /* Media Queries */
@@ -418,4 +395,25 @@ button[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+}
+
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  color: #000000;
+}
+
+th {
+  background-color: #f0f0f0;
 }
