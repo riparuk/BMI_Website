@@ -205,12 +205,27 @@ body {
   font-size: 1.4rem;
   text-align: justify;
 }
-/* Garis tengah horizontal */
-.divider-horizontal {
-    border-top: 1px solid #ccc; /* Warna dan ketebalan garis */
-    margin-top: 10px; /* Jarak di atas garis */
-    margin-bottom: 10px; /* Jarak di bawah garis */
+
+
+/* Gaya responsif untuk tampilan layar lebih kecil */
+@media screen and (max-width: 768px) {
+    .calculator {
+      max-width: 90%; /* Mengurangi lebar kalkulator untuk layar lebih kecil */
+    }
+    .calculator .calculator-sec {
+      flex-direction: column; /* Mengubah tata letak menjadi tumpuk di bawah */
+      align-items: center; /* Pusatkan elemen di tengah */
+    }
+    .calculator .calculation,
+    .calculator .result {
+      width: 100%; /* Lebar penuh untuk elemen input dan output */
+      margin: 0; /* Hapus margin untuk elemen input dan output */
+    }
+    .calculator .divider-vertical {
+      display: none; /* Sembunyikan garis pembatas pada layar kecil */
+    }
   }
+/* Garis tengah horizontal */
   
 /* About Section*/
 .about,
