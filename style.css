@@ -134,7 +134,20 @@ body {
 }
 
 /*  Calculator Session */
+.calculator-sec {
+  display: flex;
+}
 
+.calculator-sec .calculation {
+  flex: 1 1 35rem;
+}
+
+.calculator-sec .result {
+  flex: 1 1 45rem;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  text-align: justify;
+}
 /* About Section*/
 .about,
 .calculator {
@@ -214,13 +227,13 @@ footer .socials {
   padding: 1rem 0;
 }
 
-footer .socials a{
+footer .socials a {
   color: #000000;
   margin: 1rem;
 }
 
-footer .socials a:hover, 
-footer .links a:hover  {
+footer .socials a:hover,
+footer .links a:hover {
   color: #cccccc;
 }
 
@@ -235,7 +248,6 @@ footer .links a {
 
 footer .credit {
   font-size: 0.8rem;
-
 }
 
 footer .credit a {
@@ -256,45 +268,45 @@ footer .credit a {
   html {
     font-size: 62.5%;
   }
-}
 
-#hamburger-menu {
-  display: inline-block;
-}
+  #hamburger-menu {
+    display: inline-block;
+  }
 
-.navbar .navbar-nav {
-  position: absolute;
-  top: 100%;
-  right: -100%;
-  background-color: #000000;
-  width: 30 rem;
-  height: 100vh;
-  transition: 0.3s;
-}
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #000000;
+    width: 30 rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
 
-.navbar .navbar-nav.active {
-  right: 0;
-}
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
 
-.navbar .navbar-nav a {
-  color: #ffffff;
-  display: block;
-  margin: 1.5rem;
-  padding: 0.5rem;
-  font-size: 2rem;
-}
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
 
-.navbar .navbar-nav a::after {
-  transform-origin: 0 0;
-}
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
 
-.navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.2);
-}
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
 
-/* Mobile Phone */
-@media (max-width: 450px) {
-  html {
-    font-size: 55%;
+  /* Mobile Phone */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
   }
 }
