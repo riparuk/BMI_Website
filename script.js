@@ -128,6 +128,20 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Fungsi untuk mengubah tampilan navbar saat discroll
+window.onscroll = function() {
+  var navbar = document.querySelector(".navbar");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    navbar.style.transform = "translateY(-100%)"; // Menghilangkan navbar
+    navbar.style.backgroundColor = "#333"; // Ubah latar belakang
+  } else {
+    navbar.style.transform = "translateY(0)"; // Menampilkan kembali navbar
+    navbar.style.backgroundColor = "transparent"; // Kembalikan latar belakang transparan
+  }
+};
+
+
+
 // // Fungsi untuk mengosongkan input berat
 // function clearWeight() {
 //   document.getElementById("weight").value = "";
