@@ -1,4 +1,4 @@
-# BMI_Website
+# WeightAdvisor
 
 ## Deskripsi Singkat
 Sistem Periksa Berat Badan (BMI Calculator) ini adalah sebuah aplikasi sederhana yang memungkinkan pengguna untuk menghitung Indeks Massa Tubuh (BMI) mereka. BMI adalah ukuran yang digunakan untuk menentukan apakah seseorang memiliki berat badan yang ideal, kurang, atau berlebih. Aplikasi ini meminta pengguna memasukkan berat badan (dalam kilogram) dan tinggi badan (dalam sentimeter), dan kemudian menghitung BMI mereka. Hasilnya akan menunjukkan BMI pengguna bersama dengan kategori berat badan mereka, yaitu "Kurus," "Ideal," atau "Gemuk."
