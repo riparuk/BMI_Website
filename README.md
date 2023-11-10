@@ -19,6 +19,9 @@ Sistem Periksa Berat Badan (BMI Calculator) ini adalah sebuah aplikasi sederhana
 - Aturan Kecerdasan Buatan: Sistem akan memberikan rekomendasi berdasarkan BMI pengguna, seperti saran diet atau gaya hidup sehat berdasarkan hasil BMI.
 Ini akan membantu pengguna memahami lebih banyak tentang kondisi kesehatan mereka dan menerima saran berdasarkan data BMI mereka.
 
+### Screenshot
+![Screenshot Web WeightAdvisor](screenshot.png)
+
 ### Kelompok 6 Kecerdasan Buatan :
 - Rifa Faruqi (2108107010073)
 - Muhammad Rayyan Azzuhri (2108107010060)
